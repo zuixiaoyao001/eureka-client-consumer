@@ -1,0 +1,15 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: consumer
+eureka:
+#  instance:
+#    hostname: consumer
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+#      如果需要提供接口共别人调用也可以将其注册在注册中心
+#    register-with-eureka: false
+#获取服务是服务消费者的基础，故而下面的设置必须为true，默认是true
+#    fetch-registry: false
